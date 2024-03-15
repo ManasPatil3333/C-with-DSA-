@@ -124,7 +124,7 @@ int main() {
 */
 
 // 4] Pattern :
-
+/*
 int main() {
     int rows;
     cout<<"Enter number of rows : ";
@@ -134,9 +134,14 @@ int main() {
             cout<<" ";
         }
         for(int k=1; k<i*2; k++) {
-            cout<<"*";
+            for(int i=2; i<100; i++) {
+                for(int l=1; l<=i; l++) {
+                    if(i%1 == 0 && l%)
+                }
+            }
         }
         cout<<"\n";
     }
     return 0;
 }
+*/
