@@ -124,7 +124,7 @@ int main() {
 
 /*
 6] Print the maximum element of the array :
-*/
+
 int printMaxElement(int *arr, int idx, int n, int res);
 int printMaxElement(int *arr, int idx, int n, int res) {
     if(idx == n) {
@@ -146,5 +146,86 @@ int main() {
     }
     int ans = printMaxElement(arr, 0, n, 0);
     cout<<"Maximum element in the array : "<<ans<<endl;
+    return 0;
+}
+*/
+
+/*
+7] Find the sum of the elements of the array :
+
+int printSum(int *arr, int idx, int n, int sum);
+int printSum(int *arr, int idx, int n, int sum) {
+    if(idx == n) {
+        return sum;
+    }
+    sum = sum + arr[idx];
+    printSum(arr, idx+1, n, sum);
+}
+int main() {
+    int n;
+    cout<<"Enter the size of the array : ";
+    cin>>n;
+    int arr[n];
+    cout<<"Enter the elements of the array :";
+    for(int i=0; i<n; i++) {
+        cin>>arr[i];
+    }
+    int res = printSum(arr, 0, n, 0);
+    cout<<"Sum of all elements of the array : "<<res<<endl;
+    return 0;
+}
+*/
+
+/*
+7] Remove all the occurence of the character from the string :
+
+void removeChar(string &str, int idx, int n);
+void removeChar(string &str, int idx, int n) {
+    if(idx == n) {
+        return ;
+    }
+    string curr = "";
+    if(str[idx] == 'a') {
+        curr = "";
+    } else {
+        curr = curr + str[idx];
+    }
+    cout<<curr;
+    removeChar(str, idx+1, n);
+}
+int main() {
+    string str;
+    cout<<"Enter a word : ";
+    cin>>str;
+    int size = str.length();
+    removeChar(str, 0, size);
+    return 0;
+}
+*/
+
+/*
+9] Program to check whether the number or string is palindrome :
+*/
+string removeChar(string &str, int idx);
+string removeChar(string &str, int idx) {
+    if(idx == 0) {
+        return " ";
+    }
+    string curr = "";
+    curr = curr + num[idx];
+    removeChar(str, idx-1, n);
+    return curr;
+}
+int main() {
+    string num;
+    cout<<"Enter a number : ";
+    cin>>num;
+    int size = num.length();
+    string ans = removeChar(str, size);
+    if(ans == num) {
+        cout<<num<<" is a palinedrone number.";
+    } else {
+        cout<<num<<" is not a palinedrone number.";
+    }
     return 0;
 }
